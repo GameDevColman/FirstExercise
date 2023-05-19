@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NightMare_opening.unity
     guid: 1831a19ca656fe34591485169c28e457
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/TheGame1.unity
+    guid: 266f9ea4b60199e499f08b6ca713ca35
   m_configObjects: {}
