@@ -12,16 +12,11 @@ public class Statue : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (GetCoinsAmount() < COINS)
+            if (playerInventory.NumberOfCoins < COINS)
                 GiveHint();
             else
                 GiveKey();
         }
-    }
-
-    public int GetCoinsAmount()
-    {
-        return playerInventory.NumberOfCoins;
     }
 
     private void GiveHint()
@@ -31,6 +26,7 @@ public class Statue : MonoBehaviour
 
     private void GiveKey()
     {
+        Debug.Log("You really thought it would be that easy? get the key for the chest, it might be helpful");
         key.SetActive(true);
         gameObject.SetActive(false);
     }
