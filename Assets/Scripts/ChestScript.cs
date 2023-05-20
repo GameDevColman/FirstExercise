@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ChestScript : MonoBehaviour
 {
+    public AudioClip chestSound; //chest opening sound clip goes here
+    public GameObject treasureChest; //treasure chest prefab goes here
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +18,12 @@ public class ChestScript : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider collision) 
-    {
-        Debug.Log(collision);
-        if (collision.tag == "Player" && collision.transform.tag == "Chest") {
-            Destroy(collision.gameObject);
+    private void OnTriggerEnter(Collider col) {
+    if (col.gameObject.tag == "Player") {
+    AudioSource.PlayClipAtPoint(chestSound, transform.position); //plays our soundclip
+    treasureChest.GetComponent<Animation>().Play(); //plays the default animation applied to our treasureChest model
+    //treasureChest.animation.Play("other animation");
+    Destroy(gameObject);// destroys the gameobject
         }
     }
 }
