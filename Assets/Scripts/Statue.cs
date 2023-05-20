@@ -6,7 +6,7 @@ public class Statue : MonoBehaviour
 {
     public PlayerInventory playerInventory;
     public GameObject key;
-    private const COINS = 10;
+    private const int COINS = 10;
 
     private void OnCollisionEnter(Collision collision) 
     {
