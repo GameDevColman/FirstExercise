@@ -4,11 +4,8 @@ public class FmsScript : MonoBehaviour
     CharacterController controller;
     public Transform cameraTransform; // 2 camera
     public float playerSpeed = 5;
-
     public float mouseSensivity = 3;   //1
     Vector2 look;
-
-
     Vector3 velocity; // 7 person
     float mass = 1f;
     public float jumpSpeed = 5f;

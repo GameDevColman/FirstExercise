@@ -18,14 +18,13 @@ public class ChestScript : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider col) {
-    Debug.Log(col.gameObject.tag);
-
-    if (col.gameObject.tag == "Player") {
-        AudioSource.PlayClipAtPoint(chestSound, transform.position); //plays our soundclip
-        treasureChest.GetComponent<Animation>().Play(); //plays the default animation applied to our treasureChest model
-        //treasureChest.animation.Play("other animation");
-        // Destroy(gameObject);// destroys the gameobject
+    private void OnCollisionEnter(Collision collision) 
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            AudioSource.PlayClipAtPoint(chestSound, transform.position); //plays our soundclip
+            treasureChest.GetComponent<Animation>().Play(); //plays the default animation applied to our treasureChest model
+            treasureChest.GetComponent<Animation>().Stop();   
         }
     }
 }
