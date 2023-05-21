@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Key : MonoBehaviour
+public class ChestKey : MonoBehaviour
 {
     private void OnTriggerEnter(Collider collider) {
         PlayerInventory playerInventory = collider.GetComponent<PlayerInventory>();
