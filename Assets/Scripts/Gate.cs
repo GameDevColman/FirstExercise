@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class GateClose : MonoBehaviour
+public class Gate : MonoBehaviour
 {
   public PlayerInventory playerInventory;
   Animator animator;
@@ -22,23 +22,23 @@ public class GateClose : MonoBehaviour
             {
                 AudioSource.PlayClipAtPoint(gateSound, transform.position);
                 GateControl("Open");
-                SceneManager.LoadScene(2);
+                StartCoroutine(DelaySceneLoad());
+                // new WaitForSeconds(3f);
+                // SceneManager.LoadScene(2);
             } 
             else 
             {
                 AudioSource.PlayClipAtPoint(gateSound, transform.position);
                 GateControl("Close");
-                playerInventory.DialogShow("Now you can't escape");
+                playerInventory.DialogShow("You can't escape without a key");
             }
         }
     }
-
-    private void OnTriggerExit(Collider collider)
+ 
+    IEnumerator DelaySceneLoad()
     {
-        if (collider.gameObject.CompareTag("Player"))
-        {
-            // gateAnimation.SetBool("closeGate", false);
-        }
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(2);
     }
 
     private void GateControl(string state)
