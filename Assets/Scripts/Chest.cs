@@ -17,11 +17,11 @@ public class Chest : MonoBehaviour
             {
                 AudioSource.PlayClipAtPoint(chestSound, transform.position); //plays our soundclip
                 treasureChest.GetComponent<Animation>().Play(); //plays the default animation applied to our treasureChest model
-                playerInventory.dialogShow("There is not better treasure than a clue! The key for the gate is at the holy place, where the light is bright like the sun");
+                playerInventory.DialogShow("There is not better treasure than a clue! The key for the gate is at the holy place, where the light is bright like the sun");
             }
             else
             {
-                playerInventory.dialogShow("Treasure isn’t found so easily, Get the key to earn it");
+                playerInventory.DialogShow("Treasure isn’t found so easily, Get the key to earn it");
             }
         }
     }

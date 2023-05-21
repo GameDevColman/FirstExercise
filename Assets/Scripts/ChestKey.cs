@@ -14,7 +14,7 @@ public class ChestKey : MonoBehaviour
             AudioSource.PlayClipAtPoint(keySound, transform.position);
             playerInventory.ChestKeyCollected();
             gameObject.SetActive(false);
-            playerInventory.dialogShow("Great, now that youv'e found the key, run open the chest");
+            playerInventory.DialogShow("Great, now that youv'e found the key, run open the chest");
         }
     }
 }
