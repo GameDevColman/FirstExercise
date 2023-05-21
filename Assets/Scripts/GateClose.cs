@@ -20,13 +20,14 @@ public class GateClose : MonoBehaviour
         {
             if (playerInventory.DoesHaveGateKey)
             {
+                AudioSource.PlayClipAtPoint(gateSound, transform.position);
+                GateControl("Open");
                 SceneManager.LoadScene(2);
             } 
             else 
             {
                 AudioSource.PlayClipAtPoint(gateSound, transform.position);
                 GateControl("Close");
-                playerInventory.LookBehind();
                 playerInventory.DialogShow("Now you can't escape");
             }
         }

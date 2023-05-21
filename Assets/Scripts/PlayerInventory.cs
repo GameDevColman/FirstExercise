@@ -50,19 +50,4 @@ public class PlayerInventory : MonoBehaviour
          OnDialogShow.Invoke(this);
     }
 
-    public void LookBehind()
-    {
-        Transform playerTransform = transform; // Assuming this script is attached to the player object
-
-        // Get the current rotation
-        Vector3 currentRotation = playerTransform.eulerAngles;
-
-               // Calculate the new rotation by adding 180 degrees to the y-axis rotation
-               Vector3 targetRotation = new Vector3(currentRotation.x, currentRotation.y + 10f, currentRotation.z);
-
-               // Set the new rotation
-               playerTransform.eulerAngles = targetRotation;
-    }
-
-
 }

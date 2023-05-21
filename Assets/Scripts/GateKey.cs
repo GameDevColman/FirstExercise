@@ -14,6 +14,7 @@ public class GateKey : MonoBehaviour
             AudioSource.PlayClipAtPoint(keySound, transform.position);
             playerInventory.GateKeyCollected();
             gameObject.SetActive(false);
+
             playerInventory.DialogShow("Run to the gate!");
         }
     }
