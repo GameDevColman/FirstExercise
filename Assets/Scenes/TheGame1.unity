@@ -6239,6 +6239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: {fileID: 1950992426}
+  explosionSound: {fileID: 8300000, guid: e2efcd2160db343ef8296e07bc165385, type: 3}
 --- !u!4 &247396197 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: ac97007c9d09db94db05b0a5bb306b6d, type: 3}
@@ -16697,7 +16698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &697893652
 AudioListener:
   m_ObjectHideFlags: 0
@@ -30562,6 +30563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hiddenCoins: {fileID: 1910999106}
+  explosionSound: {fileID: 8300000, guid: e2efcd2160db343ef8296e07bc165385, type: 3}
 --- !u!4 &1093850628 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 447a267b9d0ea2940a650a578ef9039a, type: 3}

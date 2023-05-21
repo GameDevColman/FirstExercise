@@ -5,6 +5,7 @@ using UnityEngine;
 public class BrightHoly : MonoBehaviour
 {
     public GameObject key;
+    public AudioClip explosionSound;
 
     private void OnTriggerEnter(Collider collider) 
     {
@@ -13,6 +14,7 @@ public class BrightHoly : MonoBehaviour
         if (collider.gameObject.CompareTag("Player"))
         {
             ps.Play();
+            AudioSource.PlayClipAtPoint(explosionSound, transform.position);
             Destroy(gameObject);
             key.SetActive(true);
         }

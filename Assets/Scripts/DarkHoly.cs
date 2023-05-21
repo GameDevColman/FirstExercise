@@ -5,6 +5,7 @@ using UnityEngine;
 public class DarkHoly : MonoBehaviour
 {
     public GameObject hiddenCoins;
+    public AudioClip explosionSound;
 
     private void OnTriggerEnter(Collider collider) 
     {
@@ -13,6 +14,7 @@ public class DarkHoly : MonoBehaviour
         if (collider.gameObject.CompareTag("Player"))
         {
             ps.Play();
+            AudioSource.PlayClipAtPoint(explosionSound, transform.position);
             Destroy(gameObject);
             hiddenCoins.SetActive(true);
         }
