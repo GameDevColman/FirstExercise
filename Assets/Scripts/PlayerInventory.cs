@@ -10,6 +10,7 @@ public class PlayerInventory : MonoBehaviour
     public bool DoesHaveChestKey {get; private set;}
     public bool DoesHaveGateKey {get; private set;}
     public string dialogText {get; private set;}
+    public const int COINS = 20;
 
 
     public UnityEvent<PlayerInventory> OnCoinCollected;
@@ -35,6 +36,12 @@ public class PlayerInventory : MonoBehaviour
     public void GateKeyCollected()
     {
         DoesHaveGateKey = true;
+    }
+
+    public void CoinsPaid()
+    {
+        NumberOfCoins -= COINS;
+        OnCoinCollected.Invoke(this);
     }
 
     public void dialogShow(string newText)
