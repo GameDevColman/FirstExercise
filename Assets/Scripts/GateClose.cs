@@ -6,31 +6,42 @@ using UnityEngine;
 public class GateClose : MonoBehaviour
 {
   public PlayerInventory playerInventory;
-  public Animator gateAnimation;
+  Animator animator;
   public AudioClip gateSound;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();  
+    }
 
   private void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.CompareTag("Player"))
         {
-            if (playerInventory.DoesHaveGateKey) {
+            if (playerInventory.DoesHaveGateKey)
+            {
                 SceneManager.LoadScene(2);
-            } else {
-                        AudioSource.PlayClipAtPoint(gateSound, transform.position);
-                        gateAnimation.SetBool("closeGate", true);
-                        playerInventory.LookBehind();
-                        //transform.Rotate(new Vector3(0,180,0));
-                        playerInventory.DialogShow("Now you can't escape");
+            } 
+            else 
+            {
+                AudioSource.PlayClipAtPoint(gateSound, transform.position);
+                GateControl("Close");
+                playerInventory.LookBehind();
+                playerInventory.DialogShow("Now you can't escape");
             }
-
         }
     }
 
     private void OnTriggerExit(Collider collider)
+    {
+        if (collider.gameObject.CompareTag("Player"))
         {
-            if (collider.gameObject.CompareTag("Player"))
-            {
-                gateAnimation.SetBool("closeGate", false);
-            }
+            // gateAnimation.SetBool("closeGate", false);
         }
+    }
+
+    private void GateControl(string state)
+    {
+       animator.SetTrigger(state);
+    }
 }
