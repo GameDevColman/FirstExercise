@@ -7178,9 +7178,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightGameDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 74bd3cef71d0f3d4f97c84a2f2e002af, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 74bd3cef71d0f3d4f97c84a2f2e002af, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 74bd3cef71d0f3d4f97c84a2f2e002af, type: 3}
       propertyPath: m_Name
       value: RightGate
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 74bd3cef71d0f3d4f97c84a2f2e002af, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 74bd3cef71d0f3d4f97c84a2f2e002af, type: 3}
       propertyPath: m_RootOrder
@@ -15107,9 +15119,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeftGameDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 74bd3cef71d0f3d4f97c84a2f2e002af, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 74bd3cef71d0f3d4f97c84a2f2e002af, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 74bd3cef71d0f3d4f97c84a2f2e002af, type: 3}
       propertyPath: m_Name
       value: LeftGate
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 74bd3cef71d0f3d4f97c84a2f2e002af, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 74bd3cef71d0f3d4f97c84a2f2e002af, type: 3}
       propertyPath: m_RootOrder
@@ -15555,7 +15579,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 275092243}
-  gateAnimation: {fileID: 658211441}
   gateSound: {fileID: 8300000, guid: de37e1b5bda4f492a86e03805c005f1a, type: 3}
 --- !u!65 &658211438
 BoxCollider:
