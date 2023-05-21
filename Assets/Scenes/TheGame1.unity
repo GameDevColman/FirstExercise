@@ -39924,6 +39924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 275092243}
   key: {fileID: 5889449874257173429}
+  paySound: {fileID: 8300000, guid: 5a2e5cbf168fb4855b0d805f41cf3ae0, type: 3}
 --- !u!1001 &1484425886
 PrefabInstance:
   m_ObjectHideFlags: 0
