@@ -11,7 +11,7 @@ public class GateKey : MonoBehaviour
         {
             playerInventory.GateKeyCollected();
             gameObject.SetActive(false);
-            Debug.Log("Run to the gate!");
+            playerInventory.dialogShow("Run to the gate!");
         }
     }
 }
