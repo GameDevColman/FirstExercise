@@ -34,9 +34,15 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void ExitGame()
+    {
+        SceneManager.LoadScene(2);
+    }
+
     // Update is called once per frame
     public void Exit_No_Apllication()
     {
+        //SceneManager.LoadScene(2);
         Application.Quit();
     }
 }
