@@ -21,12 +21,13 @@ public class Statue : MonoBehaviour
 
     private void GiveHint()
     {
-        Debug.Log("You want the key out? pay me " + COINS + " coins");
+        playerInventory.dialogShow("You want the key out? pay me " + COINS + " coins");
+
     }
 
     private void GiveKey()
     {
-        Debug.Log("You really thought it would be that easy? get the key for the chest, it might be helpful");
+        playerInventory.dialogShow("You really thought it would be that easy? get the key for the chest, it might be helpful");
         key.SetActive(true);
         gameObject.SetActive(false);
     }

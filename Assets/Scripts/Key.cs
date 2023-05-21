@@ -11,7 +11,7 @@ public class Key : MonoBehaviour
         {
             playerInventory.ChestKeyCollected();
             gameObject.SetActive(false);
-            Debug.Log("Great, now that youv'e found the key, run open the chest");
+             playerInventory.dialogShow("Great, now that youv'e found the key, run open the chest");
         }
     }
 }
